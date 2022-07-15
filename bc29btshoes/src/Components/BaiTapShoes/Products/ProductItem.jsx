@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import style from "./style.module.css";
-
 import { connect } from 'react-redux';
 
 class ProductItem extends Component {
@@ -10,7 +8,7 @@ class ProductItem extends Component {
       return (
          <div className="col-4 mb-4 text-center">
             <div className="card align-items-center">
-               <img className={`card-img-top w-50 ${style.imgShoes} img-fluid`} src={image} alt="..." data-toggle="modal" data-target="#myModal"
+               <img style={{ cursor: 'help' }} className={`card-img-top w-50 img-fluid`} src={image} alt="..." data-toggle="modal" data-target="#myModal"
                   onClick={() => {
                      this.props.selectedShoes(this.props.item);
                   }}
